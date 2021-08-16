@@ -13,7 +13,7 @@ const Weather = () => {
     
     // doesnt work
     const forecast = () => {
-        // let url = `api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
+        // let url = `https//:api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
         
         // CHECK FOR ERROR BELOW?
         // fetch(url)
@@ -32,7 +32,7 @@ const Weather = () => {
         // youtube method -_-
         axios({
             method: "GET",
-            url: `api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`,
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`,
         })
         .then((res) => {
             console.log(res.data);
@@ -74,19 +74,17 @@ const Weather = () => {
                 <h1>{cityName} Current Weather</h1>
                 <div className='temp'>
                     {/* Harded coded for styling */}
-                    <h1>{temp}97&deg;</h1>
+                    <h1>{temp}&deg;</h1>
                 </div>
             </div>
             <div className='cards'>
                 <div className='minMax'>
                     <h1>MinMax</h1>
                     <p>{min}&deg; - {max}&deg;</p>
-                    <p>89&deg;- 99&deg;</p>
                 </div>
                 <div className='feelsLike'>
                     <h1>Feels Like </h1>
                     <p>{feelsLike}&deg;</p>
-                    <p>103&deg;</p>
                 </div>
             </div>
 
